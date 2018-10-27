@@ -4,9 +4,9 @@
 
 The app will take in orders from customers and deplete stock from the store's inventory.
 
-## Github Page
+## GitHub Page
 
-https://csdojo.github.io/liri-node-app/
+[GitHub Page](https://csdojo.github.io/bamazon/)
 
 
 ## bash
