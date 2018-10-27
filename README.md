@@ -24,6 +24,7 @@ npm install mysql inquirer
 ## create 10 mock products in database
 
 :alien:
+
 ![alt text](mock.PNG)
 
 ## bash how to type in command line
