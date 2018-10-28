@@ -59,8 +59,10 @@ node bamazonManager.js
 
 ![alt text](low.PNG)
 
+![alt text](add1.PNG)
 
-
+![alt text](add2.PNG)
+![alt text](add3.PNG)
 
 ## file mount
 [js#1]:bamazonCustomer.js
