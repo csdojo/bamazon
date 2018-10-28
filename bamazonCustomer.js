@@ -49,35 +49,6 @@ Stock: ${product.stock_quantity}
     });
 }
 
-// const idPrompt = () => {
-
-//     inquirer
-//         .prompt([
-// {
-//     name: "id",
-//     message: "Type in the ID of the product you want to purchase (from 1 - 10)",
-//     default: 2,
-//     type: "input",
-//     validate: function (idNumber) {
-//         if (!isNaN(idNumber)) {
-//             return true;
-//         }
-//         else {
-//             return false;
-//         }
-//     }
-// }
-//         ])
-//         .then(userResponse => {
-
-//             if (userResponse.id < 11 && userResponse.id > 0) {
-//                 unitPrompt();
-//             } else {
-//                 console.log("Please type in an id from 1-10!")
-//                 idPrompt();
-//             }
-//         });
-// }
 
 
 function purchasePrompt() {
@@ -160,29 +131,3 @@ const updateItem = (id, stock_quantity) => {
       printStats()
     })
   } 
-
-
-// const unitPrompt = () => {
-//     inquirer
-//         .prompt([
-//             {
-//                 name: "unit",
-//                 message: "Type in the unit of the product you want to purchase",
-//                 default: 10,
-//                 type: "input",
-//                 validate: function (idNumber) {
-//                     if (!isNaN(idNumber)) {
-//                         return true;
-//                     }
-//                     else {
-//                         return false;
-//                     }
-//                 }
-//             }
-//         ])
-//         .then(userResponse => {
-
-
-//         });
-
-// }
