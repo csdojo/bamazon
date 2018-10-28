@@ -29,6 +29,8 @@ npm install mysql inquirer
 
 ## bash how to type in command line
 
+========bamazon Customer========
+
 node bamazonCustomer.js
 
 You can see all products info in the command. 
@@ -45,6 +47,19 @@ You can see all products info in the command.
 ? Type in the unit of the product you want to purchase 100
 
 ![alt text](purchase2.PNG)
+
+=========bamazon Manager========
+
+node bamazonManager.js
+
+![alt text](managerselection.PNG)
+
+![alt text](view1.PNG)
+![alt text](view2.PNG)
+
+![alt text](low.PNG)
+
+
 
 
 ## file mount
