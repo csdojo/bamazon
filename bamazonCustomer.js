@@ -28,6 +28,8 @@ db.connect(function (err) {
 
 function printStats() {
 
+    
+
     const query = db.query("SELECT * FROM products", (err, productData) => {
 
         if (err)
@@ -92,6 +94,8 @@ function purchasePrompt() {
                 var query = db.query("SELECT * FROM products WHERE id=?", [purchaseInfo.id], function(err, res) {
                     for (var i = 0; i < res.length; i++) {
 
+                        
+
                         console.log("\n"+"\n"+"\n"+"===========Your Purchase===========\n"+"Id: " + res[i].id + "\n" + "Product Name: " + res[i].product_name+"\n"+"Product Price: $"+ res[i].price);
                         var newStock = res[i].stock_quantity - purchaseInfo.stock_quantity;
                         
@@ -103,16 +107,20 @@ function purchasePrompt() {
                       var cost = res[i].price * purchaseInfo.stock_quantity;
                       console.log("Your total cost will be: $"+ cost + "\n"+"\n"+"\n");
 
+                      var productSales = purchaseInfo.stock_quantity * res[i].price;
+
+                      console.log(productSales)
+
                       updateItem(res[i].id, newStock);
                     } else {
                         console.log("Sorry, we only got " + res[i].stock_quantity + " left in the stock, please adjust the quantity");
                         printStats();
                     }
+
                     }
                     
                   });
-                  
-                
+
               });
     });
 }
