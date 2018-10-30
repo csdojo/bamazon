@@ -21,7 +21,6 @@ CREATE TABLE products (
   department_name VARCHAR(45) NULL,
   price DECIMAL(10,2) NULL,
   stock_quantity INT NULL,
-  customer_unit INT NULL,
   product_sales DECIMAL(10,2) NULL,
   PRIMARY KEY (id)
 );

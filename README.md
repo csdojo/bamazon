@@ -66,6 +66,7 @@ node bamazonManager.js
 
 ## file mount
 [js#1]:bamazonCustomer.js
+[js#2]:bamazonManager.js
 
 [json#1]:package-lock.json
 [json#2]:package.json

@@ -107,11 +107,12 @@ function purchasePrompt() {
                       var cost = res[i].price * purchaseInfo.stock_quantity;
                       console.log("Your total cost will be: $"+ cost + "\n"+"\n"+"\n");
 
-                      var productSales = purchaseInfo.stock_quantity * res[i].price;
+                      var newSales = cost + res[i].product_sales;
 
-                      console.log(productSales)
 
-                      updateItem(res[i].id, newStock);
+                    //   console.log(newSales);
+
+                      updateItem(res[i].id, newStock,newSales);
                     } else {
                         console.log("Sorry, we only got " + res[i].stock_quantity + " left in the stock, please adjust the quantity");
                         printStats();
@@ -125,17 +126,18 @@ function purchasePrompt() {
     });
 }
 
-const updateItem = (id, stock_quantity) => {
+const updateItem = (id, stock_quantity,product_sales) => {
     db.query("UPDATE products SET ? WHERE ?", [
       {
         stock_quantity: stock_quantity,
+        product_sales: product_sales,
       },
       {
         id: id,
       }
     ], (err, result) => {
       if (err) throw err;
-      console.log("Purchased successfully!"+"\n"+"\n"+"\n");
+    //   console.log(product_sales);
       printStats()
     })
   } 
